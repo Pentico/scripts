@@ -1,0 +1,13 @@
+#!/bin/bash
+
+mkdir $HOME/practice/scripts/hereos
+
+mkdir $HOME/practice/scripts/hereos/see
+
+mkdir $HOME/practice/scripts/hereos/you
+
+echo "#!/bin/bash
+		
+echo "Hello, Scripts" " > hw1
+
+bash hw1

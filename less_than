@@ -1,0 +1,38 @@
+#!/bin/bash
+
+test -f /etc/fstab
+
+echo $?
+
+[ 2 -eq 1 ]
+echo $?
+
+[ -z "l" ]
+echo $?
+
+[ -n "" ]
+echo $?
+
+a=9
+
+test $(( $a - 2 )) -ne 0
+
+echo $?
+
+read name
+
+if [ -z "$name" ]
+then
+	echo "No name entered " >&2
+	exit 1 ## Set a failed return code
+fi
+
+printf "Enter a number no greater than 10: "
+read number
+if	[ "$number" -gt 10 ]
+then
+	printf "%d is too big\n" "$number" >&2
+	exit 1
+else
+	printf "You entered %d\n" "$number"
+fi
